@@ -1,0 +1,1 @@
+watch -n 0.5 lsof -a -p $(pgrep a.out)

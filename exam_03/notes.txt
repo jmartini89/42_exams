@@ -1,0 +1,28 @@
+check validity: args
+
+BACKGROUND: width, height, color
+	open stream
+	scan init line
+	check validity: init values
+	allocate paper
+memset background
+
+READ DRAW: id, id_x, id_y, radius/width-height, color
+	check validity: radius/width-height, color
+		break
+	cycle Y
+		cycle X
+			check position & write on paper
+
+read error check != -1
+
+write paper
+
+free
+close
+
+---
+
+CIRCLE (MINI):
+
+RECTANGLE (MICRO):
