@@ -38,7 +38,7 @@ static void ft_cd(char **start, char **end)
 		return ft_error("cd: bad arguments", "");
 
 	if (chdir(start[1]) == -1)
-		return ft_error("cd cannot change directory to ", start[1]);
+		return ft_error("cd: cannot change directory to ", start[1]);
 }
 
 static void ft_child(char **start, char **end, char **envp, int input, int *fd_pipe, int is_pipe, int was_pipe)
